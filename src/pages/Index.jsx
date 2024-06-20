@@ -1,17 +1,30 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, VStack, Heading, Text, Button, Box, Image } from "@chakra-ui/react";
+import { FaRunning, FaDumbbell, FaHeartbeat } from "react-icons/fa";
 
 const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+      <VStack spacing={8}>
+        <Heading as="h1" size="2xl" textAlign="center">
+          Welcome to FitTrack
+        </Heading>
+        <Text fontSize="lg" textAlign="center">
+          Your ultimate fitness tracking app. Track your workouts, monitor your progress, and achieve your fitness goals.
+        </Text>
+        <Box display="flex" justifyContent="center" alignItems="center" width="100%">
+          <Image src="/images/fitness-hero.jpg" alt="Fitness Hero" borderRadius="md" boxShadow="md" />
+        </Box>
+        <VStack spacing={4} width="100%">
+          <Button leftIcon={<FaRunning />} colorScheme="teal" size="lg" width="100%">
+            Track Workouts
+          </Button>
+          <Button leftIcon={<FaDumbbell />} colorScheme="teal" size="lg" width="100%">
+            Log Exercises
+          </Button>
+          <Button leftIcon={<FaHeartbeat />} colorScheme="teal" size="lg" width="100%">
+            Monitor Progress
+          </Button>
+        </VStack>
       </VStack>
     </Container>
   );
